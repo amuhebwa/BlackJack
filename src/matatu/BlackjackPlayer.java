@@ -1,8 +1,10 @@
 package matatu;
 
 public class BlackjackPlayer extends Hand {
-	// Get the total card value.
-	// If the hand contains an ace, the The first one is worth 11 points and the rest are each equal to one.
+	/**
+	 * Get the total card value. If the hand contains an ace, one of them is
+	 * worth 11 points and the rest are each equal to one.
+	 */
 	public int getBlackjackValue() {
 		int val = 0, cards = getCardCount();
 		boolean ace = false;

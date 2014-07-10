@@ -5,6 +5,10 @@ public class CardStack {
 	private int cardsUsed;
 	private int noOfCards = 52;
 
+	/**
+	 * Create a fresh deck of cards: 52 because the two jokers in the pack are
+	 * not allowed
+	 */
 	public CardStack() {
 		deckOfCards = new Card[noOfCards];
 		int count = 0;
@@ -17,6 +21,9 @@ public class CardStack {
 		cardsUsed = 0;
 	}
 
+	/**
+	 * Randomly shuffle the cards so that the player cannot "Read" the cards
+	 */
 	public void shuffle() {
 		int i, j, k;
 		for (k = 0; k < 51; k++) {
@@ -28,11 +35,10 @@ public class CardStack {
 		}
 		cardsUsed = 0;
 	}
-
 	public int cardsLeft() {
 		return 52 - cardsUsed;
 	}
-
+    //Pick a single card from the stack of cards
 	public Card dealCard() {
 		if (cardsUsed == 52)
 			shuffle();

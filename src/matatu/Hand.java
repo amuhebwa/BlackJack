@@ -3,12 +3,17 @@ package matatu;
 import java.util.ArrayList;
 
 public class Hand {
+	/**
+	 * hand refers to the cards in a player/dealer's hand during a single game
+	 * session
+	 */
 	private ArrayList<Card> hand;
 
 	public Hand() {
 		hand = new ArrayList<Card>();
 	}
 
+	// Add a single card to the player/dealer's hand
 	public void addCard(Card c) {
 		if (c != null)
 			hand.add(c);

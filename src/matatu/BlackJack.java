@@ -146,7 +146,7 @@ public class BlackJack {
 		 * If the dealer's hand is less than 17, they keeps hitting until
 		 * their tally is more than 17
 		 */
-		while (dealerHand.getBlackjackValue() <= 17) {
+		while (dealerHand.getBlackjackValue() < 17) {
 			Card newCard = cardStack.dealCard();
 			System.out.println("Dealer hits & gets the " + newCard);
 			dealerHand.addCard(newCard);

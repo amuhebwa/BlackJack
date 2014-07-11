@@ -3,7 +3,7 @@ package matatu;
 import java.util.Scanner;
 
 public class BlackJack {
-	static int tokens = 100;
+	static int tokens = 100; // Intial amount of tokens
 	static int bet = 0;
 	static boolean userWins = false;
 	static int amount = 0;
